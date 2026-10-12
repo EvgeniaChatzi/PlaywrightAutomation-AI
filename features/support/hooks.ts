@@ -8,6 +8,7 @@ Before({ timeout: 60 * 1000 }, async function () {
   console.log("i am first");
   const browser = await chromium.launch({
     headless: false,
+    args: ['--ignore-certificate-errors'],
   });
   (this as any).browser = browser;
   const context = await browser.newContext({ ignoreHTTPSErrors: true });

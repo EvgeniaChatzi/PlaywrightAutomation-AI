@@ -1,7 +1,4 @@
 module.exports = {
   default:
-    "--require-module ts-node/register --require 'features/**/*.ts' --require 'features/**/*.js' --format progress --publish-quiet",
+    "--require-module ts-node/register --require 'features/**/*.ts' --format progress --publish-quiet",
 };
-//npx cucumber-js features/ErrorValidation.feature --exit
-//npx cucumber-js --parallel 2 --exit --format html:cucumber-report.html
-//npx cucumber-js features/greeting.feature --parallel 2 --exit --format html:cucumber-report.html

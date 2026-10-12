@@ -1,8 +1,10 @@
 node_modules/
 test-results/
 playwright-report/
-
 allure-results/
 allure-report/
 cucumber-report.html
 state.json
+.env
+.DS_Store
+*.png

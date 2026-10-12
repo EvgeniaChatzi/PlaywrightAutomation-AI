@@ -1,17 +1,14 @@
 {
   "name": "PlayWrightAutomation",
   "version": "1.0.0",
-  "description": "",
+  "description": "Playwright + Cucumber BDD automation framework with AI agents for playwright.dev",
   "main": "index.js",
   "scripts": {
-    "regression": "npx playwright test",
-    "webTests": "npx playwright test --grep @Web",
-    "APITests": "npx playwright test --grep @API",
-    "SafariNewConfig": "npx playwright test --config playwright.config1.js --project=safari",
-    "cucumber": "node ./node_modules/@cucumber/cucumber/bin/cucumber-js",
-    "cucumber:html": "node ./node_modules/@cucumber/cucumber/bin/cucumber-js features/playwrightTests.feature --format html:cucumber-report.html --exit"
+    "cucumber": "node --env-file=.env ./node_modules/@cucumber/cucumber/bin/cucumber-js",
+    "cucumber:smoke": "node --env-file=.env ./node_modules/@cucumber/cucumber/bin/cucumber-js features/playwrightTests.feature --require-module ts-node/register --require 'features/**/*.ts' --tags @Smoke --exit",
+    "cucumber:html": "node --env-file=.env ./node_modules/@cucumber/cucumber/bin/cucumber-js features/playwrightTests.feature --format html:cucumber-report.html --exit"
   },
-  "keywords": [],
+  "keywords": ["playwright", "cucumber", "bdd", "typescript", "automation"],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -19,8 +16,5 @@
     "@playwright/test": "^1.56.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
-  },
-  "dependencies": {
-    "exceljs": "^4.4.0"
   }
 }
