@@ -1,0 +1,26 @@
+{
+  "name": "PlayWrightAutomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "regression": "npx playwright test",
+    "webTests": "npx playwright test --grep @Web",
+    "APITests": "npx playwright test --grep @API",
+    "SafariNewConfig": "npx playwright test --config playwright.config1.js --project=safari",
+    "cucumber": "node ./node_modules/@cucumber/cucumber/bin/cucumber-js",
+    "cucumber:html": "node ./node_modules/@cucumber/cucumber/bin/cucumber-js features/playwrightTests.feature --format html:cucumber-report.html --exit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "*",
+    "@playwright/test": "^1.56.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  }
+}
