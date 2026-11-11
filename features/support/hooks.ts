@@ -26,6 +26,11 @@ AfterStep(async function ({ result }: any) {
 });
 
 After(async function () {
+  // Close the API session opened by "I am logged in via API" (eCommerce tests)
+  if ((this as any).api) {
+    await (this as any).api.dispose();
+  }
+
   if ((this as any).page) {
     console.log("Closing browser after scenario");
   }
